@@ -47,12 +47,6 @@ const Runs = () => {
         if (run === oppRun) {
             // OUT logic
 
-            // push current player to the OUT array
-            // get the first player from the remaining array
-            // remove the player from the remaining array
-            // add to the onStand
-            // add the bowler to the batsman
-
             if (battingTeam) {
                 let remaining = [...battingTeam?.remaining];
                 const out = [...battingTeam.out];

@@ -22,6 +22,8 @@ interface InitialState {
     currentRunRate: number;
     requiredRunRate: number;
     projectedRuns: number;
+
+    showInterModal: boolean;
 }
 
 const initialState: InitialState = {
@@ -55,6 +57,7 @@ const initialState: InitialState = {
     currentRunRate: 0,
     requiredRunRate: 0,
     projectedRuns: 0,
+    showInterModal: false,
 };
 
 const gameSlice = createSlice({
@@ -327,6 +330,10 @@ const gameSlice = createSlice({
                     (state.bowlingTeam?.overDeci * 6 +
                         state.bowlingTeam.overFlt);
         },
+
+        setShowInterModal: (state, { payload }) => {
+            state.showInterModal = payload;
+        },
     },
 });
 
@@ -362,6 +369,7 @@ export const {
     calculateCurrentRunRate,
     calculateRequiredRunRate,
     calculateProjectedScore,
+    setShowInterModal,
 } = gameSlice.actions;
 
 export default gameSlice.reducer;

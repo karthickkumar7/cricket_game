@@ -20,7 +20,7 @@ const Scorecard = () => {
     }, [bowlingTeam]);
 
     return (
-        <section className="w-[85%] lg:w-[40%] h-[100px] px-4 py-2 rounded-lg flex justify-between items-center bg-blue-600">
+        <section className="w-[85%] lg:w-[40%] h-[100px] px-4 py-2 rounded-lg flex justify-between items-center bg-blue-700">
             <div className="w-1/2 h-full">
                 {/* batting team name */}
                 <h4 className="uppercase font-bold">{battingTeam?.name}</h4>

@@ -29,7 +29,7 @@ const Runrate = () => {
     }, [battingTeam?.onStand, battingTeam?.offStand, battingTeam?.squad]);
 
     return (
-        <section className="w-full lg:w-[49%] h-[100px] lg:h-full lg:flex flex justify-center items-center p-4 rounded-lg bg-teal-600">
+        <section className="w-full lg:w-[49%] h-[100px] lg:h-full lg:flex flex justify-center items-center p-4 rounded-lg bg-teal-700">
             <div className="w-1/2 font-bold uppercase space-y-2">
                 <p className="lg:text-xl">
                     {onStand?.name}* {onStand?.runs}
