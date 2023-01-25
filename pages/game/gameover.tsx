@@ -83,7 +83,7 @@ const GameOver = () => {
             {/* table section */}
             <section className="w-full lg:w-[40%] h-[72%] flex flex-col lg:flex-row lg:items-center">
                 {/* table */}
-                <div className="w-full lg:w-[60%] h-[75%] flex justify-center items-center lg:items-stretch">
+                <div className="w-full lg:w-[80%] h-[75%] lg:h-[50%] flex justify-center items-center lg:items-stretch">
                     <EndGameBattingTable />
                 </div>
             </section>

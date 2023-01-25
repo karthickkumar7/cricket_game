@@ -20,6 +20,9 @@ const Play = () => {
         sessionOneCompleted,
         sessionOneCompletedStatComp,
         sessionOne,
+        battingTeam,
+        bowlingTeam,
+        over,
     } = useSelector((s: RootState) => s.game);
     const dispatch = useDispatch();
 
@@ -156,18 +159,31 @@ const Play = () => {
                         <Table />
                     </div>
                     {sessionOneCompleted && (
-                        <div className="w-[85%] lg:w-[40%] h-[80px] flex items-center px-4 rounded-lg bg-orange-600">
+                        <div className="w-[85%] lg:w-[40%] h-[90px] flex flex-col justify-center px-4 rounded-lg bg-orange-600">
                             <p className="uppercase text-2xl text-bold">
                                 target : {sessionOne.batting.score}
                             </p>
+                            <p className="lg:text-base text-sm">
+                                <span className="capitalize">
+                                    {battingTeam?.name}
+                                </span>{' '}
+                                needs{' '}
+                                <span className="font-bold">
+                                    {battingTeam &&
+                                        sessionOne.batting.score -
+                                            battingTeam?.score}{' '}
+                                </span>
+                                runs from{' '}
+                                <span className="font-bold">
+                                    {bowlingTeam &&
+                                        over * 6 -
+                                            bowlingTeam?.overDeci * 6 +
+                                            bowlingTeam.overFlt}
+                                </span>{' '}
+                                balls
+                            </p>
                         </div>
                     )}
-                    {/* <button
-                        className="w-[85%] lg:w-[40%] lg:h-[60px] px-4 py-2 rounded-lg uppercase font-semibold bg-zinc-500"
-                        onClick={returnHomeHandler}
-                    >
-                        home
-                    </button> */}
                 </>
             ) : (
                 <InterTable />

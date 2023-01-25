@@ -18,7 +18,7 @@ const Table = () => {
         <section
             className={`${
                 showBowlingTable ? 'bg-purple-500' : 'bg-slate-300'
-            } w-full min-h-[280px] p-2 rounded-lg relative`}
+            } w-full h-full p-2 rounded-lg relative`}
         >
             <table className="w-full">
                 {showBowlingTable ? (

@@ -2,7 +2,11 @@ import React from 'react';
 import Table from './Table';
 
 const endGameBattingTable = () => {
-    return <Table />;
+    return (
+        <div className="w-full h-[350px] lg:w-full lg:h-full">
+            <Table />
+        </div>
+    );
 };
 
 export default endGameBattingTable;
